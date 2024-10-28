@@ -61,7 +61,40 @@ let nestedDotNotaion = nestedObjet.adress.city;
 console.log("nested object using both dot notation:",nestedDotNotaion);
 
 let nestedOptionalChaining= nestedObjet.adress?.country;
-console.log('OPTIONAL CHAINING:',nestedOptionalChaining);
+
+//Given an array of student objects with properties name and marks, use:map() to extract the names.
+//filter() to return students with marks above 80.
+//find() to get the first student with marks over 90.
+
+let arrayOfStudent = [
+    {name:'ali',marks:90},
+    {name:'alif',marks:75},
+    {name:'alifa',marks:78},
+    {name:'alifatul Zohra',marks:82},
+
+]
+let studentMap = arrayOfStudent.map(item=>item.name);
+console.log(studentMap);
+let studentFilter = arrayOfStudent.filter(item=>item.marks>80);
+console.log(studentFilter);
+let studentFind = arrayOfStudent.find(item=>item.marks>80);
+console.log(studentFind); //ফাইন্ড শর্ত পূরন করা প্রথম উপাদান ই শো করে। 
+
+//Use forEach() on an array of objects (e.g., products with name and price) to log a message with each product's details.
+
+let arrayEach = [
+    {name:'water',price:90},
+    {name:'napa',price:75},
+    {name:'gas pipe',price:78},
+    {name:'salt',price:82},
+]
+
+arrayEach.forEach(item=>{
+    let details = `Product: ${item.name}, price: ${item.price}`
+    console.log(details);
+    
+})
+
 
 
 
